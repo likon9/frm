@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <form method="post" th:action="main">
+        <input type = "text" name="tag" placeholder="введите тему"/>
+        <input type = "text" name="message" placeholder="введите сообщение"/>
+        <input type="hidden" name="_csrf" th:value="${_csrf.token}"/>
+        <button type="submit">отправить</button>
+    </form>
+</div>
+<table>
+<thead>
+<tr>
+    <th> tag </th>
+    <th> message </th>
+    <th> sender </th>
+    <th>  </th>
+</tr>
+</thead>
+<tbody>
+<tr th:if="${topics.empty}">
+    <td colspan="2"> No Topics Available </td>
+</tr>
+<tr th:each="topic : ${topics}">
+    <td><span th:text="${topic.tag}"> Tag </span></td>
+    <td><span th:text="${topic.message}"> Topic </span></td>
+    <td><span th:text="${topic.SenderName}"> Topic </span></td>
+    <td>
+        <a th:href="@{/topic/{linkTitle}(linkTitle=${topic.id})}">addAnswer</a>
+    </td>
+
+</tr>
+</tbody>
+</table>
+<form th:action="logout" method="post">
+    <input type="submit" value="Sign Out"/>
+</form>
+
+</body>
+</html>
