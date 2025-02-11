@@ -1,10 +1,8 @@
 package learn.project.frm.service;
 
-import jakarta.validation.Valid;
 import learn.project.frm.domain.Role;
 import learn.project.frm.domain.User;
 import learn.project.frm.repos.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

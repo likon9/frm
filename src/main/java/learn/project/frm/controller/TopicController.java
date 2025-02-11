@@ -18,9 +18,6 @@ public class TopicController {
     public String main(
             @PathVariable Topic topic,
             Model model) {
-        System.out.println();  System.out.println();  System.out.println();  System.out.println();  System.out.println();  System.out.println();
-        System.out.println(topic.toString());
-        System.out.println();  System.out.println();  System.out.println();  System.out.println();  System.out.println();  System.out.println();
         model.addAttribute("topic", topic);
         return "addAnswer";
     }

@@ -1,24 +1,16 @@
 package learn.project.frm.controller;
 
 import jakarta.validation.Valid;
-import learn.project.frm.domain.Role;
 import learn.project.frm.domain.Topic;
 import learn.project.frm.domain.User;
 import learn.project.frm.repos.TopicRepository;
-import learn.project.frm.repos.UserRepository;
 import learn.project.frm.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.kafka.KafkaProperties;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-
-import java.time.LocalDate;
-import java.util.Collections;
-import java.util.Optional;
 
 @Controller
 public class GreetingController {
